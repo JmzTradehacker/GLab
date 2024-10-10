@@ -21,3 +21,19 @@ const adventurer = {
     }
 };
 
+// Part 2: Character and Adventurer Classes
+// Creating the Character class with static properties and methods
+class Character {
+    static MAX_HEALTH = 100; // Static property for maximum health
+
+    constructor(name) {
+        this.name = name;
+        this.health = Character.MAX_HEALTH; // Initialize with full health
+        this.inventory = [];
+    }
+
+    // Method for rolling a dice
+    roll(mod = 0) {
+        return Math.floor(Math.random() * 20) + 1 + mod; // Random roll between 1 and 20
+    }
+}
