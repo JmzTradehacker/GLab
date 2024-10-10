@@ -37,3 +37,15 @@ class Character {
         return Math.floor(Math.random() * 20) + 1 + mod; // Random roll between 1 and 20
     }
 }
+
+
+
+
+// Function to display messages in the UI log area
+function logMessage(message) {
+    const logArea = document.getElementById('logArea');
+    const newMessage = document.createElement('p');
+    newMessage.textContent = message;
+    logArea.appendChild(newMessage);
+    logArea.scrollTop = logArea.scrollHeight; // Scroll to the latest message
+}
